@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Contact Deborah Chinye for academic or professional opportunities." />
+    <meta name="theme-color" content="#060807" />
+    <title>Contact | Deborah Chinye</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
+    <script defer src="js/nav.js"></script>
+    <script defer src="js/contact.js"></script>
+  </head>
+  <body class="page-contact">
+   
+    <header class="topbar">
+      <a href="index.html" class="brand" aria-label="Home"><span class="brand-dot"></span>Deborah Chinye</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="sidebar" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </header>
+    <div class="scrim"></div>
+    <div class="app">
+      <aside class="sidebar" id="sidebar">
+        <a href="index.html" class="side-profile" aria-label="Home">
+          
+          <span class="side-name">Deborah Chinye</span>
+          <span class="side-role">Aspiring Data Analyst</span>
+        </a>
+        <nav aria-label="Main navigation">
+          <ul class="side-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="planner.html">Academic Planner</a></li>
+            <li><a href="contact.html" aria-current="page">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="side-foot">
+          <ul class="side-social">
+            <li><a href="https://github.com/Debby-03" target="_blank" rel="noreferrer">GitHub</a></li>
+            <li><a href="https://www.linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a></li>
+            <li><a href="mailto:debbychinye03@gmail.com">Email</a></li>
+          </ul>
+          <p>MIVA Open University<br />COS 106 | 2025/2026</p>
+        </div>
+      </aside>
+      <div class="main-col">
+        <main id="main" class="page">
+          <header class="page-head reveal">
+           
+            <h1 style="color: black;">Let's connect</h1>
+            <p class="lead" style="color: black;">Questions, collaborations or opportunities? Send a message and I will get back to you.</p>
+          </header>
+
+          <section class="block reveal contact-grid">
+            <div class="contact-side">
+              <ul class="contact-cards">
+                <li class="card mini"><span aria-hidden="true">&#9993;</span><div><strong>Email</strong><a href="mailto:debbychinye03@gmail.com">debbychinye03@gmail.com</a></div></li>
+                <li class="card mini"><span aria-hidden="true">&#9742;</span><div><strong>Phone</strong><a href="tel:+2347042959296">07042959296</a></div></li>
+                <li class="card mini"><span aria-hidden="true">&#128205;</span><div><strong>Location</strong>Lagos, Nigeria (remote / online)</div></li>
+              </ul>
+              
+
+            <figure class="media-placeholder">
+              <video controls preload="metadata" poster="assets/images/contact-poster.svg" aria-label="Decorative bubbles video">
+                <source src="assets/media/intro.mp4" type="video/mp4" />
+                <p>Your browser does not support the video element.</p>
+              </video>
+              <figcaption>A little moment of calm</figcaption>
+            </figure>
+            </div>
+            
+            <div class="card form-card">
+              <h2 class="card-title">Send a message</h2>
+              <form id="contact-form" novalidate>
+                <div class="field-group"><label for="full-name">Full Name</label><input id="full-name" name="fullName" type="text" required /><small class="error-message" id="full-name-error" aria-live="polite"></small></div>
+                <div class="field-group"><label for="email">Email Address</label><input id="email" name="email" type="email" required /><small class="error-message" id="email-error" aria-live="polite"></small></div>
+                <div class="field-group"><label for="phone">Phone Number</label><input id="phone" name="phone" type="tel" inputmode="numeric" required /><small class="helper-text">Digits only. Please omit international prefixes, spaces and punctuation.</small><small class="error-message" id="phone-error" aria-live="polite"></small></div>
+                <div class="field-group"><label for="message">Message</label><textarea id="message" name="message" rows="5" required></textarea><small class="error-message" id="message-error" aria-live="polite"></small></div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <p id="contact-success" class="form-success" aria-live="polite"></p>
+              </form>
+            </div>
+          </section>
+        </main>
+        <footer class="site-footer" style="background-color: rgb(49, 4, 4);">
+          <p>&copy; 2026 Deborah Chinye. Built with HTML, CSS and JavaScript for COS 106.</p>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="planner.html">Planner</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>

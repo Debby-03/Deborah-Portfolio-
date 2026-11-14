@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Academic planner for tracking coursework, deadlines and study tasks." />
+    <meta name="theme-color" content="#060807" />
+    <title>Academic Planner | Deborah Chinye</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
+    <script defer src="js/nav.js"></script>
+    <script defer src="js/planner.js"></script>
+  </head>
+  <body class="page-planner">
+    
+    <header class="topbar">
+      <a href="index.html" class="brand" aria-label="Home"><span class="brand-dot"></span>Deborah Chinye</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="sidebar" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </header>
+    <div class="scrim"></div>
+    <div class="app">
+      <aside class="sidebar" id="sidebar">
+        <a href="index.html" class="side-profile" aria-label="Home">
+        
+          <span class="side-name">Deborah Chinye</span>
+          <span class="side-role">Aspiring Data Analyst</span>
+        </a>
+        <nav aria-label="Main navigation">
+          <ul class="side-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="planner.html" aria-current="page">Academic Planner</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="side-foot">
+          <ul class="side-social">
+            <li><a href="https://github.com/Debby-03" target="_blank" rel="noreferrer">GitHub</a></li>
+            <li><a href="https://www.linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a></li>
+            <li><a href="mailto:debbychinye03@gmail.com">Email</a></li>
+          </ul>
+          <p>MIVA Open University<br />COS 106 | 2025/2026</p>
+        </div>
+      </aside>
+      <div class="main-col">
+        <main id="main" class="page">
+          <header class="page-head reveal">
+           
+            <h1 style="color: black;">Academic task manager</h1>
+            <p class="lead" style="color: black;">Add tasks, tick them off when done, and delete what you no longer need. Your tasks are saved in this browser.</p>
+          </header>
+
+          <section class="block reveal planner-grid">
+            <div class="card">
+              <h2 class="card-title">Add a task</h2>
+              <form id="task-form" novalidate>
+                <div class="field-group"><label for="task-title">Task title</label><input id="task-title" name="taskTitle" type="text" maxlength="120" required /></div>
+                <div class="field-group"><label for="course-code">Course code</label><input id="course-code" name="courseCode" type="text" maxlength="20" placeholder="COS 106" /></div>
+                <div class="field-group"><label for="task-date">Due date</label><input id="task-date" name="dueDate" type="date" /></div>
+                <div class="field-group"><label for="task-priority">Priority</label>
+                  <select id="task-priority" name="priority"><option value="High">High</option><option value="Medium" selected>Medium</option><option value="Low">Low</option></select>
+                </div>
+                <button type="submit" class="btn btn-primary">Add task</button>
+                <p id="task-feedback" class="form-feedback" aria-live="polite"></p>
+              </form>
+            </div>
+            <div class="card list-card">
+              <div class="planner-toolbar">
+                <h2 class="card-title">My tasks</h2>
+                <div class="filter-actions" aria-label="Task filters">
+                  <button class="task-filter active" data-filter="all" type="button">All</button>
+                  <button class="task-filter" data-filter="pending" type="button">Pending</button>
+                  <button class="task-filter" data-filter="completed" type="button">Completed</button>
+                </div>
+              </div>
+              <div class="task-summary" aria-live="polite">
+                <div><strong id="total-tasks">0</strong><span>Total</span></div>
+                <div><strong id="pending-count">0</strong><span>Pending</span></div>
+                <div><strong id="completed-count">0</strong><span>Completed</span></div>
+              </div>
+              <div class="bar planner-progress">
+                <div class="bar-top"><span>Overall progress</span><span id="progress-val">0%</span></div>
+                <div class="bar-track" role="progressbar" aria-label="Task completion" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progress-track"><div class="bar-fill" id="progress-fill" style="width:0%"></div></div>
+              </div>
+              <ul id="task-list" class="task-list" aria-live="polite"></ul>
+            </div>
+          </section>
+        </main>
+        <footer class="site-footer" style="background-color: rgb(49, 4, 4);">
+          <p>&copy; 2026 Deborah Chinye. Built with HTML, CSS and JavaScript for COS 106.</p>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="planner.html">Planner</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
